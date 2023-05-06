@@ -1,0 +1,3 @@
+tx_powermail.flexForm.type.addFieldOptions.imageUpload = LLL:EXT:uppload/Resources/Private/Language/locallang.xlf:image_upload_field.title
+tx_powermail.flexForm.type.addFieldOptions.imageUpload.dataType = 0
+tx_powermail.flexForm.type.addFieldOptions.imageUpload.export = 1

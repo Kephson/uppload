@@ -1,0 +1,22 @@
+{namespace vh=In2code\Powermail\ViewHelpers}
+<f:asset.script identifier="img-uppload-js" src="EXT:uppload/Resources/Public/Uppload/simple.js" />
+<f:asset.css identifier="img-uppload-js" href="EXT:uppload/Resources/Public/Uppload/simple.css" />
+
+<div class="powermail_uppload powermail_fieldwrap powermail_fieldwrap_type_input powermail_fieldwrap_{field.marker} {field.css} {settings.styles.framework.fieldAndLabelWrappingClasses}"
+     data-pic="#uppload-pic-{field.uid}" data-btn="#uppload-btn-{field.uid}" data-input="#powermail_field_{field.uid}"
+     data-maxwidth="2000" data-maxheight="2000" data-maxFileSize="10000000">
+    <f:render partial="Form/FieldLabel" arguments="{_all}" />
+
+    <div class="{settings.styles.framework.fieldWrappingClasses}">
+        <div class="image-container">
+            <f:image id="uppload-pic-{field.uid}" alt="Image upload" class="uppload-pic" src="EXT:uppload/Resources/Public/Image/InitialImage.svg" />
+        </div>
+        <br/><br/>
+        <button class="btn btn-secondary uppload-btn" id="uppload-btn-{field.uid}"><f:translate key="select-image" extensionName="uppload" /></button>
+        <f:form.hidden
+            id="powermail_field_{field.uid}"
+            property="{field.marker}"
+            value="{vh:misc.prefillField(field:field, mail:mail)}"
+            class="uppload-path powermail_hidden form-control {field.css} powermail_{field.marker}" />
+    </div>
+</div>

@@ -1,0 +1,8 @@
+# add partial path for Powermail
+plugin.tx_powermail {
+  view {
+    partialRootPaths {
+      143 = EXT:uppload/Resources/Private/Partials/Powermail/
+    }
+  }
+}

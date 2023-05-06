@@ -1,0 +1,44 @@
+{
+  "name": "eh-uppload-test",
+  "version": "1.0.0",
+  "description": "Uppload test project",
+  "keywords": [
+    "uppload",
+    "typescript",
+    "css",
+    "scss",
+    "el nino",
+    "file upload",
+    "image upload",
+    "crop",
+    "uploader",
+    "upload",
+    "javascript"
+  ],
+  "main": "index.js",
+  "private": true,
+  "homepage": "https://ephra.im",
+  "author": "Ephraim Härer",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "ts-node": "^10.9.1",
+    "uppload": "^2.7.2"
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss-loader": "^7.0.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}

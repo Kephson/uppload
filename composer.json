@@ -1,0 +1,54 @@
+{
+	"name": "ehaerer/uppload",
+	"description": "Brings uppload.js.org to TYPO3",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-cms-extension",
+	"keywords": [
+		"TYPO3",
+		"uppload",
+		"file",
+		"upload"
+	],
+	"authors": [
+		{
+			"name": "Ephraim Härer",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://ephra.im",
+	"require": {
+		"php": "^8.0",
+		"typo3/cms-core": "^11.5",
+		"typo3/cms-felogin": "^11.5",
+		"typo3/cms-frontend": "^11.5",
+		"in2code/powermail": "^10.4"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.28",
+		"roave/security-advisories": "dev-master",
+		"typo3/coding-standards": "^0.5.3",
+		"typo3/testing-framework": "^6.16.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"EHAERER\\Uppload\\": "Classes"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true,
+			"ergebnis/composer-normalize": true
+		},
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"extension-key": "uppload",
+			"web-dir": ".Build/web"
+		}
+	}
+}
