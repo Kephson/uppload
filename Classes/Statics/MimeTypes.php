@@ -99,7 +99,7 @@ class MimeTypes
         'php' => ['application/x-httpd-php'],
         'pdf' => ['application/pdf'],
         'pgp' => ['application/pgp'],
-        'png' => ['image/png'],
+        'png' => ['image/png', 'image/x-citrix-png', 'image/x-png', 'image/vnd.mozilla.apng'],
         'pps' => ['application/mspowerpoint', 'application/vnd.ms-powerpoint'],
         'ppt' => ['application/mspowerpoint', 'application/vnd.ms-powerpoint'],
         'pptx' => ['application/vnd.openxmlformats-officedocument.presentationml.presentation'],

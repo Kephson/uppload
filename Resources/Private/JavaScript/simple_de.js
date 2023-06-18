@@ -34,7 +34,6 @@ Array.prototype.forEach.call(upploadElements, function (el) {
       document.querySelector(btn),
       document.querySelector(pic)
     ],
-    compressionToMime: "image/jpeg",
     maxWidth: maxwidth,
     maxHeight: maxheight
   });
