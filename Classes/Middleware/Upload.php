@@ -55,7 +55,7 @@ class Upload implements MiddlewareInterface
         'save_session' => true,
         'obscure_dir' => false,
         'check_mime' => true,
-        'extensions' => 'jpg,png',
+        'extensions' => 'jpg,png,jpeg',
     ];
 
     private string $uploadPath = '';
@@ -72,12 +72,10 @@ class Upload implements MiddlewareInterface
         if ((int)$uid !== 1) {
             return $handler->handle($request);
         }
-
+        if ($request->getMethod() !== 'POST') {
+            throw new InvalidArgumentException('No file submitted.');
+        }
         try {
-            if ($request->getMethod() !== 'POST') {
-                throw new InvalidArgumentException('No file submitted.');
-            }
-
             $this->config = $this->getUploadConfig();
             $this->feUserObj = $request->getAttribute('frontend.user');
 

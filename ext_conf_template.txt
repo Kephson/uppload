@@ -5,4 +5,4 @@ upload_path = 1:form_uploads
 # cat=uppload; type=boolean; label=Save upload to session
 save_session = 1
 # cat=uppload; type=string; label=Allowed file extensions
-file_extensions = jpg,png
+file_extensions = jpg,png,jpeg
