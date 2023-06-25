@@ -6,3 +6,7 @@ upload_path = 1:form_uploads
 save_session = 1
 # cat=uppload; type=string; label=Allowed file extensions
 file_extensions = jpg,png,jpeg
+# cat=uppload; type=boolean; label=Check mime type of uploaded files
+check_mime = 1
+# cat=uppload; type=boolean; label=Obscure upload directory
+obscure_dir = 0

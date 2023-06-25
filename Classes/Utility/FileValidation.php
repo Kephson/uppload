@@ -25,7 +25,7 @@ class FileValidation
      * @param string $fileName Filename to check
      * @param string $allowedExtensions CSV list of allowed file extensions
      */
-    public static function checkFileExtension($fileName, $allowedExtensions): void
+    public static function checkFileExtension(string $fileName, string $allowedExtensions): void
     {
         $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
         $extensions = GeneralUtility::trimExplode(',', $allowedExtensions, true);
@@ -48,7 +48,7 @@ class FileValidation
      *
      * @return string
      */
-    public static function getMimeType($filePath): string
+    public static function getMimeType(string $filePath): string
     {
         if (function_exists('finfo_open')) {
             $info = @finfo_open(FILEINFO_MIME);
@@ -88,7 +88,7 @@ class FileValidation
      *
      * @return bool
      */
-    public static function checkMimeType($filePath): bool
+    public static function checkMimeType(string $filePath): bool
     {
         $flag = false;
         $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));

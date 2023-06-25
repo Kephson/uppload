@@ -246,9 +246,9 @@ class Upload implements MiddlewareInterface
             'feuser_required' => $extSettings['frontend_user_required'] ?: true,
             'feuser_field' => '',
             'save_session' => $extSettings['save_session'] ?: true,
-            'obscure_dir' => false,
-            'check_mime' => true,
-            'extensions' => $extSettings['file_extensions'] ?: 'jpg,png',
+            'obscure_dir' => $extSettings['obscure_dir'] ?: false,
+            'check_mime' => $extSettings['check_mime'] ?: true,
+            'extensions' => $extSettings['file_extensions'] ?: 'jpg,png,jpeg',
         ];
     }
 
