@@ -243,11 +243,11 @@ class Upload implements MiddlewareInterface
         $extSettings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get(self::EXTKEY);
         return [
             'upload_path' => $extSettings['upload_path'] ?: '1:form_uploads',
-            'feuser_required' => $extSettings['frontend_user_required'] ?: true,
+            'feuser_required' => (bool)$extSettings['frontend_user_required'],
             'feuser_field' => '',
-            'save_session' => $extSettings['save_session'] ?: true,
-            'obscure_dir' => $extSettings['obscure_dir'] ?: false,
-            'check_mime' => $extSettings['check_mime'] ?: true,
+            'save_session' => (bool)$extSettings['save_session'],
+            'obscure_dir' => (bool)$extSettings['obscure_dir'],
+            'check_mime' => (bool)$extSettings['check_mime'],
             'extensions' => $extSettings['file_extensions'] ?: 'jpg,png,jpeg',
         ];
     }
